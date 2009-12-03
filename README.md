@@ -139,13 +139,18 @@ snapshots](http://build.clojure.org) to the default repositories.
 
 ## Hacking
 
-You'll need to bootstrap using a stable release before you can hack on
-Leiningen. Grab the stable bin script (linked under "Installation"
-above), put it on your $PATH as "lein-stable", and do "lein-stable
-self-install". Then run "lein-stable deps" in your checkout. When that
-finishes, symlink bin/lein from your checkout to your path.  This will
-make "lein" run from your checkout while "lein-stable" uses the jar
-self-installed in ~/.m2.
+To hack or run a bleeding edge version of Leiningen from one of the
+git branches, you'll need to bootstrap from a stable release.  To do
+this first checkout an appropriate Leiningen release:
+
+    $ git clone git://github.com/technomancy/leiningen.git
+
+Then grab the stable bin script (linked under "Installation" above),
+put it on your $PATH as "lein-stable", and do "lein-stable
+self-install". Then run "lein-stable deps" from inside your
+checkout. When that finishes, symlink bin/lein from your checkout to
+your path.  This will make "lein" run from your checkout while
+"lein-stable" uses the jar self-installed in ~/.m2.
 
 The [mailing list](http://groups.google.com/group/clojure) and the
 leiningen or clojure channels on Freenode are the best places to
